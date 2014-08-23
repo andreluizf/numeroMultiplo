@@ -19,6 +19,13 @@ public class Numero {
 		return multiplo;
 	}
 
+	public void inserirNumero() {
+		while (!validaMultiplo()) {
+			JOptionPane.showMessageDialog(null, "Numero Invalido");
+		}
+
+	}
+
 	public boolean validaMultiplo() {
 
 		try {
@@ -26,7 +33,7 @@ public class Numero {
 			multiplo = Integer.parseInt(num);
 			return true;
 		} catch (Exception e) {
-			return  false;
+			return false;
 		}
 
 	}

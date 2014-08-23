@@ -25,14 +25,22 @@ public class Intervalo {
 		return fim;
 	}
 
+	public void intervalo() {
+		while (!validaIntervalo()) {
+			JOptionPane.showMessageDialog(null, "Numero Invalido");
+		}
+	}
+
 	public boolean validaIntervalo() {
 
 		try {
 			String num = JOptionPane
 					.showInputDialog("Digite o  intervalo: ex: 2;10 ");
 			String[] x = num.split(";");
+			
 			inicio = Integer.parseInt(x[0]);
 			fim = Integer.parseInt(x[1]);
+			
 			return true;
 		} catch (Exception e) {
 			return false;
